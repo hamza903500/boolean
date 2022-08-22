@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    
+    <style>
+        .hj{
+            background-color: rgb(165, 236, 236);
+text-decoration: underline;
+color: rgb(139, 139, 235);
+        }
+        .lk{
+            background-color: rgb(241, 241, 166);
+            text-decoration: underline;
+            text-decoration-color: rgb(140, 140, 233);
+        }
+        body{
+            color: rgb(105, 221, 183);
+        }
+    </style>
+</head>
+
+
+<body>
+
+<h1 class="hj">Hamza Rasheed Basic Mathematic Calculator</h1>
+
+    <h2 class="lk"> Condition checking "IF else"</h2>
+
+    <form onsubmit="dosum(); return false">
+        num1: <input id="num1" type="number" required placeholder="enter a number">
+        <br>
+        operation: <input id="operation" type="text" placeholder="enter + - * / ">
+        <br>
+        num2: <input id="num2" type="number" required placeholder="enter a number">
+        <br>
+        <button type="submit"> submit</button>
+
+
+
+    </form>
+    <h3 id="result"> </h3>
+    <script>
+
+        function dosum() {
+            let firstnumber = +document.querySelector("#num1").value
+            let secondnumber = +document.querySelector("#num2").value
+            let operation = document.querySelector("#operation").value
+
+            let resultElement = document.querySelector("#result")
+            if (operation === "+") {
+                resultElement.innerHTML = firstnumber + secondnumber
+            } else if (operation === "-") {
+                resultElement.innerHTML = firstnumber - secondnumber
+
+            } else if (operation === "*") {
+                resultElement.innerHTML = firstnumber * secondnumber
+
+            } else if (operation === "/") {
+                resultElement.innerHTML = firstnumber / secondnumber
+                // } else if (operation==="/") {
+
+                // if (secondnumber ==="0") {
+                // resultElement.innerHTML = "cannot divide by 0"
+                // } else {
+                // resultElement.innerHTML = firstNumber / secondNumber;
+                // }
+
+
+
+            } else if (operation === "/") {
+
+                if (secondNumber === 0) {
+                    resultElement.innerHTML = "Cannot divide by 0"
+
+                }
+
+
+
+
+            } else {
+                resultElement.innerHTML = "invalid operation "
+
+            }
+
+
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+
+
+</body>
+
+</html>
